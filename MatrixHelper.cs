@@ -14,7 +14,7 @@ public static class MatrixHelper
         {
             for (int j = 0; j < size; j++)
             {
-                matrix[i][j] = rnd.Next(0, 2);
+                matrix[i][j] = rnd.Next(0, 4);
             }
         }
 

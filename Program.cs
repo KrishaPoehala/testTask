@@ -1,6 +1,6 @@
 ﻿using test;
 
-var matrix = MatrixHelper.Generate(10);
+var matrix = MatrixHelper.Generate(9);
 MatrixHelper.Print(matrix);
 DeleteAllSeries(matrix);
 MatrixHelper.Print(matrix);
@@ -35,6 +35,7 @@ void HandleColumns(int[][] matrix)
 
         MoveColumn(matrix, series, column: i);
     }
+
 }
 
 void MoveColumn(int[][] matrix, IEnumerable<(int Start, int Count)> series, int column)
@@ -54,7 +55,7 @@ void MoveColumnByOneSeria(int[][] matrix, (int Start, int Count) seria, int colu
 
     for (int i = 0; i < seria.Count; i++)
     {
-        matrix[i][column] = Random.Shared.Next(0, 2);
+        matrix[i][column] = Random.Shared.Next(0, 4);
     }
 }
 
@@ -70,7 +71,7 @@ void MoveRowByOneSeria(int[][] matrix, (int Start, int Count) seria, int row)
             }
             else
             {
-                matrix[i][j] = Random.Shared.Next(0, 2);
+                matrix[i][j] = Random.Shared.Next(0, 4);
             }
         } 
     }
